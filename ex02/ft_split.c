@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 10:17:32 by tsabri            #+#    #+#             */
-/*   Updated: 2024/09/08 15:21:01 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/09/08 15:33:33 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_count_strs(char *s, char *charset)
 		while (s[i] != '\0' && !ft_check_sep(s[i], charset))
 			i++;
 	}
-	retutn (count);
+	return (count);
 }
 
 int	ft_strlen_sep(char *s, char *charset)
@@ -85,7 +85,7 @@ char	**ft_split(char *str, char *charset)
 	{
 		while (*str != '\0' && ft_check_sep(*str, charset))
 			str++;
-		if (str != '\0')
+		if (*str != '\0')
 		{
 			strs[i] = ft_word(str, charset);
 			i++;
